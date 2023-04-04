@@ -11,6 +11,7 @@ customers as (
 )
 ,
 final as (
+    
 
     select 
         *
