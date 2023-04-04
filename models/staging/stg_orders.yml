@@ -7,7 +7,7 @@ models:
         tests:
           - unique
           - not_null
-        description: This is a unique identifier for an order - from staging
+        description: This is a unique identifier for an order -- test
       - name: status
         tests:
           - accepted_values:
