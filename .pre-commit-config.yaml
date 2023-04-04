@@ -1,0 +1,7 @@
+repos:
+- repo: https://github.com/dbt-checkpoint/dbt-checkpoint
+  rev: v1.0.0
+  hooks:
+  - id: unify-column-description
+    name: Check that all models have tests
+    files: ^models/
