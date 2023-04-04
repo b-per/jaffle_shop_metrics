@@ -35,7 +35,7 @@ jobs:
 
     # Transforming the output of get_file_changes to a string we can use for our next step
     # We want to take in account both new files and files that have been modified
-      - name: Get changed .sql files in /models to lint
+      - name: Get changed .yml files in /models to lint
         id: get_files_to_lint
         shell: bash -l {0}
         run: |
@@ -46,11 +46,11 @@ jobs:
           echo \
           $(echo ${{ steps.get_file_changes.outputs.files_modified }} |
           tr -s ' ' '\n' |
-          grep -E '^models.*[.]sql$' |
+          grep -E '^models.*[.]yml$' |
           tr -s '\n' ' ') \
           $(echo ${{ steps.get_file_changes.outputs.files_added }} |
           tr -s ' ' '\n' |
-          grep -E '^models.*[.]sql$' |
+          grep -E '^models.*[.]yml$' |
           tr -s '\n' ' ')
           )"
 
