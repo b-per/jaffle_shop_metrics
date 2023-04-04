@@ -3,5 +3,5 @@ repos:
   rev: v1.0.0
   hooks:
   - id: unify-column-description
-    name: Check that all models have tests
+    name: Check that the columns have the same description
     files: ^models/
