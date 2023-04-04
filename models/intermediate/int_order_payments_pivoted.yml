@@ -12,7 +12,7 @@ models:
         description: This is a unique identifier for an order
 
       - name: customer_id
-        description: Foreign key to the customers table
+        description: This is a unique identifier for a customer
         tests:
           - not_null
 
