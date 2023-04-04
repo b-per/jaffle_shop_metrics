@@ -57,7 +57,9 @@ jobs:
       - name: Run pre-commit
         shell: bash -l {0}
         run: |
-          pre-commit run --files ${{ steps.get_files_to_lint.outputs.files }}
+          pre-commit run --all-files
+        # run: |
+        #   pre-commit run --files ${{ steps.get_files_to_lint.outputs.files }}
 
 
       - name: Create Pull Request
